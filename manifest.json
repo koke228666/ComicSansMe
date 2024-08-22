@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "ComicSansMe",
+  "version": "1.0",
+  "description": "Make internet look better!",
+   "icons": {
+	"32": "icons/32.png",
+	"48": "icons/48.png",
+	"96": "icons/96.png"
+  },
+  "permissions": ["activeTab", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["comicsansize.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
